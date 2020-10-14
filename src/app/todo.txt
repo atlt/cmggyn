@@ -1,0 +1,17 @@
+Aplicativo para controlar dispositivos da rede da câmara
+aspectos:
+  -cadastrar dispositivos e suas interligações
+
+App baseado em angular, pwa, angular/material e firebase
+tarefas:
+
+1 - instalção do node js
+2 - instalação do angular/cli
+3 - criação do projeto angular
+4 - configuração do git
+5 - configuração do pwa e material
+6 - configuração do firebase
+
+7 - definição de login
+8 - página inicial
+9 - cadastros

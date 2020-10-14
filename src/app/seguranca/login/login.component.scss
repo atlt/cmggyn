@@ -1,0 +1,39 @@
+.login-container {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-card {
+  max-width: 400px;
+  min-height: 300px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+.login-header-image {
+  background-image: url('~src/assets/logo.png');
+  background-size: cover;
+  width: 80px;
+  height: 69px;
+}
+
+.login-form-field {
+  width: 100%;
+}
+
+.login-card-actions {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+.login-btn-entrar {
+   width: 100%;
+}

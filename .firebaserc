@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "cmggyn": {
+      "hosting": {
+        "cmggyn": [
+          "cmggyn"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "cmggyn"
+  }
+}
