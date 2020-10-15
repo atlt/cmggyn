@@ -37,3 +37,16 @@
 .login-btn-entrar {
    width: 100%;
 }
+
+.login-mat-header {
+  margin-bottom: 24px;
+}
+
+.login-error {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  & mat-icon {
+    margin-right: 4px;
+  }
+}

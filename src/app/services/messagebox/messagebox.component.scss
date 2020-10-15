@@ -1,0 +1,34 @@
+.messagebox-container {
+  min-width: 100px;
+}
+
+.messagebox-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100px;
+  flex-wrap: nowrap;
+}
+
+.messagebox-icon {
+  font-size: 64px;
+  margin-right: 16px;
+  width: 64px;
+  height: 64px;
+}
+
+.messagebox-actions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.messagebox-button {
+  width: 100px;
+}
+
+.icon-yellow {
+  color: rgb(228, 194, 0);
+}

@@ -10,12 +10,16 @@ import { environment } from '../environments/environment';
 import { AngularFireModule } from '@angular/fire';
 import { LoginComponent } from './seguranca/login/login.component';
 import { HomeComponent } from './home/home.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MessageboxComponent } from './services/messagebox/messagebox.component';
+import { MessageboxService } from './services/messagebox.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    MessageboxComponent
   ],
   imports: [
     BrowserModule,
@@ -23,9 +27,11 @@ import { HomeComponent } from './home/home.component';
     BrowserAnimationsModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    MaterialModule
+    MaterialModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [MessageboxService],
+  entryComponents: [MessageboxComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

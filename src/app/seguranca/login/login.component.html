@@ -1,22 +1,38 @@
 <div class="login-container">
-  <mat-card class="login-card mat-elevation-z8">
-    <mat-card-header>
-      <div mat-card-avatar class="login-header-image"></div>
-      <mat-card-title>Câmara Municipal de Goiânia</mat-card-title>
-      <mat-card-subtitle>Digite suas credenciais para entrar!</mat-card-subtitle>
-    </mat-card-header>
-    <mat-card-content>
-      <mat-form-field appearance="outline" class="login-form-field">
-        <mat-label>Endereço de e-mail</mat-label>
-        <input matInput placeholder="Endereço de e-mail">
-      </mat-form-field>
-      <mat-form-field appearance="outline" class="login-form-field">
-        <mat-label>Senha</mat-label>
-        <input matInput placeholder="Senha">
-      </mat-form-field>
-    </mat-card-content>
-    <mat-card-actions class="login-card-actions">
-      <button color="primary" mat-raised-button class="login-btn-entrar">Entrar</button>
-    </mat-card-actions>
-  </mat-card>
+  <form [formGroup]="frmLogin" (ngSubmit)="onSubmit()">
+    <mat-card class="login-card mat-elevation-z8">
+      <mat-card-header class="login-mat-header">
+        <div mat-card-avatar class="login-header-image"></div>
+        <mat-card-title>Câmara Municipal de Goiânia</mat-card-title>
+        <mat-card-subtitle>Digite suas credenciais para entrar!</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p>
+          <mat-form-field appearance="outline" class="login-form-field">
+            <mat-label>Endereço de e-mail</mat-label>
+            <input id="email" matInput placeholder="Endereço de e-mail" formControlName="email">
+            <mat-error class="login-error" *ngIf="this.frmLogin.controls.email.invalid &&
+              (this.frmLogin.controls.email.dirty || this.frmLogin.controls.email.touched)">
+              <mat-icon>error</mat-icon> Endereço de email inválido!
+            </mat-error>
+            <mat-error class="login-error" *ngIf="this.frmLogin.controls.email.errors != null && this.frmLogin.controls.email.errors.required">
+              <mat-icon>error</mat-icon> Endereço de email é obrigatório!
+            </mat-error>
+          </mat-form-field>
+        </p>
+        <p>
+          <mat-form-field appearance="outline" class="login-form-field">
+            <mat-label>Senha</mat-label>
+            <input id="senha" type="password" matInput placeholder="Senha" formControlName="senha">
+            <mat-error class="login-error" *ngIf="this.frmLogin.controls.senha.errors != null && this.frmLogin.controls.senha.errors.required">
+              <mat-icon>error</mat-icon> A senha é obrigatória!
+            </mat-error>
+          </mat-form-field>
+        </p>
+      </mat-card-content>
+      <mat-card-actions class="login-card-actions">
+        <button type="submit" color="primary" mat-raised-button class="login-btn-entrar">Entrar</button>
+      </mat-card-actions>
+    </mat-card>
+  </form>
 </div>

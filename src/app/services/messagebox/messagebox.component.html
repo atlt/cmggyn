@@ -1,0 +1,17 @@
+<div class="messagebox-container">
+  <h2 mat-dialog-title>{{this.data.titleBar}}</h2>
+  <mat-dialog-content class="messagebox-content">
+    <mat-icon *ngIf="this.data.messagetype == 0" class="messagebox-icon" color="primary">error</mat-icon>
+    <mat-icon *ngIf="this.data.messagetype == 1" class="messagebox-icon" color="primary">help</mat-icon>
+    <mat-icon *ngIf="this.data.messagetype == 2" class="messagebox-icon" color="warn">report</mat-icon>
+    <mat-icon *ngIf="this.data.messagetype == 3" class="messagebox-icon icon-yellow">warning</mat-icon>
+    <div class="messagebox-text">{{this.data.text}}</div>
+  </mat-dialog-content>
+  <mat-dialog-actions class="messagebox-actions">
+    <button color="primary" class="messagebox-button" mat-raised-button mat-dialog-close>
+      {{(this.data.messagetype == 0 ||this.data.messagetype == 2 || this.data.messagetype == 3)? 'OK' : 'Sim'}}
+    </button>
+    <!-- The mat-dialog-close directive optionally accepts a value as a result for the dialog. -->
+    <button class="messagebox-button" *ngIf="this.data.messagetype == 1" mat-raised-button>Não</button>
+  </mat-dialog-actions>
+</div>
