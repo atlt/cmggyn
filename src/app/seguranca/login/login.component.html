@@ -31,7 +31,7 @@
         </p>
       </mat-card-content>
       <mat-card-actions class="login-card-actions">
-        <button type="submit" color="primary" mat-raised-button class="login-btn-entrar">Entrar</button>
+        <button type="submit" color="primary" mat-raised-button class="login-btn-entrar" [disabled]="this.frmLogin.invalid">Entrar</button>
       </mat-card-actions>
     </mat-card>
   </form>

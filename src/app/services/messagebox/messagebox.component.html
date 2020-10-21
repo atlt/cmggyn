@@ -8,10 +8,10 @@
     <div class="messagebox-text">{{this.data.text}}</div>
   </mat-dialog-content>
   <mat-dialog-actions class="messagebox-actions">
-    <button color="primary" class="messagebox-button" mat-raised-button mat-dialog-close>
+    <button color="primary" class="messagebox-button" mat-raised-button >
       {{(this.data.messagetype == 0 ||this.data.messagetype == 2 || this.data.messagetype == 3)? 'OK' : 'Sim'}}
     </button>
     <!-- The mat-dialog-close directive optionally accepts a value as a result for the dialog. -->
-    <button class="messagebox-button" *ngIf="this.data.messagetype == 1" mat-raised-button>Não</button>
+    <button class="messagebox-button" *ngIf="this.data.messagetype == 1" mat-raised-button mat-dialog-close dialogResult="Abort">Não</button>
   </mat-dialog-actions>
 </div>

@@ -12,14 +12,14 @@ export class MessageboxService {
 
   constructor(private matDialog: MatDialog) { }
 
-  show(message: string, title: string, messageBoxType: MessageBoxType): void {
-    this.matDialog.open(MessageboxComponent, {
+  async show(message: string, title: string, messageBoxType: MessageBoxType) {
+    return await this.matDialog.open(MessageboxComponent, {
       data: {
         text: message,
         titleBar: title,
         messagetype: messageBoxType
       }
-    });
+    }).afterClosed().toPromise();
   }
 }
 
