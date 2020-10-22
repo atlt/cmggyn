@@ -1,3 +1,4 @@
+import { MapnetworkComponent } from './draw/mapnetwork/mapnetwork.component';
 import { LoginComponent } from './seguranca/login/login.component';
 import { HomeComponent } from './home/home.component';
 import { NgModule } from '@angular/core';
@@ -5,7 +6,9 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: 'home', component: HomeComponent},
+  { path: 'home', component: HomeComponent, children: [
+    {path: 'mapnetwork', component: MapnetworkComponent}
+  ]},
   { path: 'login', component: LoginComponent }
 ];
 

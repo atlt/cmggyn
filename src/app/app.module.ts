@@ -13,13 +13,15 @@ import { HomeComponent } from './home/home.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MessageboxComponent } from './services/messagebox/messagebox.component';
 import { MessageboxService } from './services/messagebox.service';
+import { MapnetworkComponent } from './draw/mapnetwork/mapnetwork.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     HomeComponent,
-    MessageboxComponent
+    MessageboxComponent,
+    MapnetworkComponent
   ],
   imports: [
     BrowserModule,
